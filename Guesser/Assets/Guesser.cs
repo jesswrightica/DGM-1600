@@ -24,7 +24,8 @@ public class Guesser : MonoBehaviour {
 
 
 		textBox.text = "Welcome to Guesser "
-						+ "\nPick a number in your head and we'll get started!"
+						+ 	"\nPick a number in your head and we'll get started!"
+						+ 	"\nI only have five guesses to guess your number, so make it a good one!"
 						+	"\n\nThe highest number you can pick is " +max
 			    		+	"\nThe lowest number you can pick is " +min 
 						+	"\n\nClick the Up arrow for HIGHER, Down arrow for LOWER, and the enter button for EQUAL."
@@ -54,6 +55,9 @@ public class Guesser : MonoBehaviour {
 			
 			if (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.DownArrow)) {
 				//counter;
+
+				textBox.text = "You win...";
+
 				print ("You win...");
 			}
 		}
@@ -63,6 +67,9 @@ public class Guesser : MonoBehaviour {
 			min = guess;
 			guess = (max + min) / 2;
 			counter--;
+
+			textBox.text = "Is the number higher or lower than " +guess;
+
 			print ("Is the number higher or lower than " +guess);
 		}
 
@@ -70,10 +77,16 @@ public class Guesser : MonoBehaviour {
 			max = guess;
 			guess = (max + min) / 2;
 			counter--;
+
+			textBox.text = "Is the number higher or lower than " +guess;
+
 			print ("Is the number higher or lower than " +guess);
 		}
 
 		if (Input.GetKeyDown (KeyCode.Return)) {
+
+			textBox.text = "I win! HA!";
+
 			print ("I win.");
 		}
 
