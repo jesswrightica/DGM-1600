@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: a7ac4eb1c549746eaa91966e9761a2ca
+timeCreated: 1507047649
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Blocktur
+  fontNames:
+  - Blocktur
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

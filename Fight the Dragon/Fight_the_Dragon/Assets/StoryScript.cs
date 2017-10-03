@@ -7,7 +7,7 @@ public class StoryScript : MonoBehaviour {
 
 	public Text textobject;
 
-	public enum States {Start, Begining, Gold, Door, Dialog, Attack_0};
+	public enum States {Start, Begining, Gold, Door, Dialog, Attack_0, Die, Attack_1, Attack_2, Win};
 	public bool key=false, sword=false;
 	public States mystate;
 
@@ -30,6 +30,14 @@ public class StoryScript : MonoBehaviour {
 			State_Dialog ();
 		} else if (mystate == States.Attack_0) {
 			State_Attack0 ();
+		} else if (mystate == States.Die) {
+			State_Die ();
+		} else if (mystate == States.Attack_1) {
+			State_Attack1 ();
+		} else if (mystate == States.Attack_2) {
+			State_Attack2 ();
+		} else if (mystate == States.Win) {
+			State_Win ();
 		}
 	}
 
@@ -38,9 +46,9 @@ public class StoryScript : MonoBehaviour {
 		"\nYou look around, bewilderment grasping at you as you see the bodies of your dead comrades lying in mountians of gold and jewels." +
 		"\nIt is then that you remember why you are here and what you came here to do." +
 		"\n\nYour quest, is to slay the dragon..." +
-		"\n\nPress ENTER to begin.";
+		"\n\nPress (B) to begin.";
 
-		if (Input.GetKeyDown (KeyCode.KeypadEnter)) {
+		if (Input.GetKeyDown (KeyCode.B)) {
 			mystate = States.Begining;
 		}
 	}
@@ -131,8 +139,52 @@ public class StoryScript : MonoBehaviour {
 		}
 	}
 	void State_Attack0 (){
+		textobject.text = "Do you charge at the dragon? (C)" +
+		"\nOr do you run around the dragon? (R)";
+
+		if (Input.GetKeyDown (KeyCode.C)) {
+			mystate = States.Die;
+		}
+		else if (Input.GetKeyDown (KeyCode.R)) {
+			mystate = States.Attack_1;
+		}
 	
-	
+	}
+	void State_Die () {
+		textobject.text = "The Dragon was expecting that..." +
+		"\n\nYOU DIED BY DRAGON FIRE";
+	}
+	void State_Attack1 () {
+		textobject.text = "You run around the dragon and stab it's tail! It howls in pain!" +
+		"\n\nDo you hang on for dear life? (H)" +
+		"\nOr do you let go? (G)";
+
+		if (Input.GetKeyDown (KeyCode.H)) {
+			mystate = States.Attack_2;
+		} else if (Input.GetKeyDown (KeyCode.G)) {
+			mystate = States.Die;
+		}
+	}
+	void State_Attack2 () {
+		textobject.text = "You hang onto the tail for dear life, the dragon thrashing wildly!" +
+		"\n\nDo you take a chance and run up the back of the dragon to attack it's head? (B)" +
+		"\nOr Do you try to slice off the dragon's tail? (T)";
+
+		if (Input.GetKeyDown (KeyCode.B)) {
+			mystate = States.Win;
+		} else if (Input.GetKeyDown (KeyCode.T)) {
+			mystate = States.Die;
+		}
+	}
+	void State_Win () {
+		textobject.text = "As you run up the dragon's back, you swing your mighty sword and run it though the beast's brain!" +
+		"\nHowever, as you run to try to carve the heart out of the beast, you keel over and hold your stomach." +
+		"\nScales scratch off your skin and fangs make your lips bleed." +
+		"\n\nYou are now a dragon." +
+		"\nYour new quest..." +
+		"\n\nPROTECT YOUR DRAGON HOARD!"+
+		"\n\n you win... for now...";
+
 	}
 }
 
