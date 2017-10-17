@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Brick1 : MonoBehaviour {
 
-	public int health;
+	public int health = 5;
 
 
-	void OnCollisionEnter (Collision collision) {
+	void OnCollisionEnter2D (Collision2D collider) {
 
-
+		health--;
+		if (health <= 0) {
+			Destroy (this.gameObject);
+		}
 	}
 		
 }
