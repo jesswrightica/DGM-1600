@@ -14,6 +14,7 @@ public class Paddle : MonoBehaviour {
 	}
 
 	void Update () {
+		//get mouse position, translating to world coordinates
 		Vector3 mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		//overide vertical y position
 		mousePos.y = paddleHeight;
