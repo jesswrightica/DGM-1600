@@ -9,7 +9,7 @@ public class Floor : MonoBehaviour {
 
 
 	void OnTriggerEnter2D (Collider2D trigger) {
-		myLevelManager.LevelLoad ("Game Over");
+		myLevelManager.LoadLevel ("Game Over");
 	}
 
 

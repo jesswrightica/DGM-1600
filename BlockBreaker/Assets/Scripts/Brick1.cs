@@ -7,15 +7,24 @@ public class Brick1 : MonoBehaviour {
 	public int health = 5;
 	public Sprite[] picture;
 	private int count = 0;
+	private LevelManager lvlManager;
+
+	void Start () {
+		lvlManager = FindObjectOfType<LevelManager> ();
+	}
 
 	void OnCollisionEnter2D (Collision2D collider) {
 
 		health--;
 		count++;
 		if (health <= 0) {
+			LevelManager.brickCount--;
+			lvlManager.CheckBrickCount ();
 			Destroy (this.gameObject);
 		}
-			GetComponent<SpriteRenderer> ().sprite = picture[count];
+		if (health > 0) {
+			GetComponent<SpriteRenderer> ().sprite = picture [count];
+		}
 	}
 		
 }

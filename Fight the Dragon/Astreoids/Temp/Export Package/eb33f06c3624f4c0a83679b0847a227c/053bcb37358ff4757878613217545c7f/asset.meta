@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 053bcb37358ff4757878613217545c7f
+timeCreated: 1507047944
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Forestry
+  fontNames:
+  - Forestry
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
