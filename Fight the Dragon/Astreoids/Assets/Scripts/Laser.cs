@@ -7,11 +7,11 @@ public class Laser : MonoBehaviour {
 
 	public float lifetime;
 	//public float speed;
-
+	public int health = 1;
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
@@ -23,6 +23,13 @@ public class Laser : MonoBehaviour {
 			Destroy (this.gameObject);
 		}
 
+
 		//transform.Translate (Vector3.up * speed * Time.deltaTime);
+	}
+	void OnCollisionEnter2D(Collision2D collider) {
+		health--;
+		if (health <= 0) {
+			Destroy (this.gameObject);
+		}
 	}
 }
