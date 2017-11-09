@@ -71,7 +71,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 342}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 43
+  controlID: 102
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 342}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 9
+  controlID: 121
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 271}
   m_MaxSize: {x: 10004, y: 10021}
   vertical: 0
-  controlID: 89
+  controlID: 42
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -393,7 +393,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: f6250000
     m_LastClickedID: 9718
-    m_ExpandedIDs: 00000000f625000006260000c22700006e280000fe280000e62900005e2a0000a02a0000
+    m_ExpandedIDs: 00000000fc2500000c260000cc2700007828000008290000f0290000682a0000aa2a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -421,18 +421,18 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f625000006260000c22700006e280000fe280000e62900005e2a0000a02a0000
+    m_ExpandedIDs: 00000000fc2500000c260000cc2700007828000008290000f0290000682a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Spawnpoint
-      m_OriginalName: Spawnpoint
+      m_Name: Follow
+      m_OriginalName: Follow
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 11724
+      m_UserData: 12870
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -539,7 +539,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 1afcffff00000000
+    m_ExpandedIDs: 12fcffff1afcffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -589,14 +589,14 @@ MonoBehaviour:
     width: 994
     height: 482
   m_SceneLighting: 1
-  lastFramingTime: 939.983060002327
+  lastFramingTime: 3149.3008109927177
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.8904596, y: -0.311913, z: -10}
+    m_Target: {x: -0.79198873, y: 1.861777, z: 0}
     speed: 2
-    m_Value: {x: -0.8904596, y: -0.311913, z: -10}
+    m_Value: {x: -0.79198873, y: 1.861777, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -623,9 +623,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 16.949486
+    m_Target: 60.842426
     speed: 2
-    m_Value: 16.949486
+    m_Value: 60.842426
   m_Ortho:
     m_Target: 1
     speed: 2
