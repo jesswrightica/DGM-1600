@@ -5,6 +5,7 @@ using UnityEngine;
 public class Starship : MonoBehaviour {
 
 	public int health = 1;
+	public GameObject explosionEffect;
 	public float paddleHeight;
 
 	private Transform paddleTrans;
@@ -28,6 +29,7 @@ public class Starship : MonoBehaviour {
 		health--;
 		if (health <= 0) {
 			Destroy (this.gameObject);
+			Instantiate (explosionEffect, transform.position, Quaternion.identity);
 		}
 	}
 }

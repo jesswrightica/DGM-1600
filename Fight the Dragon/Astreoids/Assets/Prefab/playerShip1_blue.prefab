@@ -98,6 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e360e53dd3247dfb72c39c98fec8c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1
+  explosionEffect: {fileID: 1119142279253326, guid: 1c0da69daa7b243a8b5a2071190093b6,
+    type: 2}
   paddleHeight: -4.29
 --- !u!114 &114320920956346672
 MonoBehaviour:
