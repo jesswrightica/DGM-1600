@@ -24,4 +24,5 @@ public class partic : MonoBehaviour {
 		//apply
 		particleTrans.position = mousePos;
 	}
+
 }
