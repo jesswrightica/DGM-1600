@@ -25,7 +25,7 @@ public class Starship : MonoBehaviour {
 		//apply
 		paddleTrans.position = mousePos;
 	}
-	void OnCollisionEnter2D(Collision2D collider) {
+	void OnTriggerEnter2D(Collider2D collider) {
 		health--;
 		if (health <= 0) {
 			Destroy (this.gameObject);

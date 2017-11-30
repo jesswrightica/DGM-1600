@@ -7,6 +7,7 @@ public class Meteor : MonoBehaviour {
 
 	public float startSpin;
 	public int health = 5;
+	public GameObject explosionEffect;
 
 	// Use this for initialization
 	void Start () {
@@ -14,10 +15,11 @@ public class Meteor : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void OnCollisionEnter2D(Collision2D collider) {
+	void OnTriggerEnter2D(Collider2D collider) {
 		health--;
 		if (health <= 0) {
 			Destroy (this.gameObject);
+			Instantiate (explosionEffect, transform.position, Quaternion.identity);
 		}
 	}
 }

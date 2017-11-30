@@ -26,7 +26,7 @@ public class Laser : MonoBehaviour {
 
 		//transform.Translate (Vector3.up * speed * Time.deltaTime);
 	}
-	void OnCollisionEnter2D(Collision2D collider) {
+	void OnTriggerEnter2D(Collider2D collider) {
 		health--;
 		if (health <= 0) {
 			Destroy (this.gameObject);
