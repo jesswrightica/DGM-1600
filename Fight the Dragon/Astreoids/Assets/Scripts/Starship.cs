@@ -31,5 +31,16 @@ public class Starship : MonoBehaviour {
 			Destroy (this.gameObject);
 			Instantiate (explosionEffect, transform.position, Quaternion.identity);
 		}
+	    if (health <= 0) {
+			Application.LoadLevel ("Game Over");
+		}
 	}
 }
+
+
+//	public LevelManager myLevelManager;
+
+
+//void OnTriggerEnter2D (Collider2D trigger) {
+	//myLevelManager.LoadLevel ("Game Over");
+//}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour {
 	public string leveltoLoad;
@@ -18,7 +19,7 @@ public class Timer : MonoBehaviour {
 		timer -= Time.deltaTime;
 		timerSeconds.text = timer.ToString ("f0");
 		if (timer <= 0) {
-			Application.LoadLevel (leveltoLoad);
+			Application.LoadLevel (SceneManager.GetSceneByBuildIndex(SceneManager.GetActiveScene() )+1);
 		}
 	}
 }
